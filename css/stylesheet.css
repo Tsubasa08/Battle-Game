@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background-image: url(../img/body-bg.png);
+}
+html, body {
+	height: 100%;
+}
+header{
+	width: 100%;
+	background-color: #23628f;
+	background-image: url(../img/header-bg.png);
+	background-position: 50% 50%;
+	border-top: #20567d 10px solid;
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 10;
+}
+.header-contents{
+	box-sizing:border-box;
+	max-width: 960px;
+	margin: 0 auto;
+	min-height: 100px;
+	background-image: url(../img/header-logo.png);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+}
+.header-contents h1 {
+	margin: 0;
+	color: #fff;
+	/* line-height: 100; */
+}
+.header-contents h1{
+	padding: 30px 0 10px 85px;
+	font-size: 24px;
+}
+.header-contents h2{
+	padding: 0 0 0 85px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.main-wrapper{
+	position: relative;
+	box-sizing:border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding:30px 30px;
+	background-color: #fff;
+	border-left: #dadada 1px solid;
+	border-right: #dadada 1px solid;
+	min-height: 80%;
+	min-height: calc(100% - 200px);
+	z-index: 0;
+}
+footer{
+	box-sizing:border-box;
+	max-width: 1200px;
+	margin: 0 auto 10px auto;
+	padding:15px 30px;
+	background-color: #23628f;
+	border: #dadada 1px solid;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+}
+a{
+	color: #5e78c1;
+	text-decoration: none;
+}
+a:hover{
+	color: #b04188;
+	text-decoration: underline;
+}
+table {
+	height: 40px;
+	width: 300px;
+	border-collapse: collapse;
+}
+table tr td{
+	border: 1px solid black;
+	width: 33%;
+	text-align: center;
+}
+
+/*
+.boxs {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.boxs .box {
+	height: 100px;
+	width: 100px;
+	background-color: purple;
+	line-height: 100px;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+.output {
+	font-size: 20px;
+	text-align: center;
+}
+.output span {
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+}
+.boxs .active {
+	background-color: skyblue;
+} */
+
+
+/* ------- ポケモン的な --------- */
+/* .wrapper {
+	background-color: red;
+	z-index: 10000;
+} */
+.whiteFilter {
+	height: 100%;
+	width: 100%;
+}
+.display-wrapper {
+	width: 95%;
+	height: 700px;
+	margin: 0 auto;
+	padding: 50px;
+	box-sizing: border-box;
+	border: 1px solid gray;
+	position: relative;
+	font-size: 20px;
+	background-color: #d8e698;
+}
+.display-wrapper img {
+	height: 200px;
+	width: auto;
+}
+.enemy-wrapper {
+	height: 200px;
+	width: 50%;
+	position: relative;
+}
+
+.display-wrapper .ally {
+	display: flex;
+}
+
+/* --- モンスター画像 --- */
+.eImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 1s;
+}
+.enemy .iSpread, .ally .aSpread {
+	height: 400px;
+	width: auto;
+	z-index: 99;
+	display: block;
+}
+.enemy .iSpread {
+	position: absolute;
+	top: 100%;
+	left: 250%;
+	transform: translateX(-250%);
+	-webkit-transform: translateX(-250%);
+}
+
+.aImage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: 1s;
+}
+.ally .aSpread {
+	position: absolute;
+	top: -35%;
+	left: 50%;
+	transform: translateY(-35%) translateX(-50%);
+	-webkit-transform: translateY(-35%) translateX(-50%);
+}
+
+
+.display-wrapper .enemy {
+	width: 100%;
+	/* justify-content: space-between; */
+}
+.display-wrapper .ally {
+	position: absolute;  /*攻撃した時に中央に要素が入るとずれるから固定する*/
+	right: 0;
+	bottom: 0;
+	height: 200px;
+	width: 90%;
+	margin: 0 50px 50px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.display-wrapper .ally .panel {
+	position: absolute;
+	top: 0;
+	left: 30%;
+	transform: translateX(-30%);
+	-webkit-transform: translateX(-30%);
+	height: 150px;
+	width: 20%;
+	margin-right: 30px;
+	box-sizing: border-box;
+	padding: 10px 15px;
+	border: 2px solid black;
+	border-radius: 10px;
+	display: none;
+	background-color: skyblue;
+}
+.metar {
+	background-color: white;
+	height: 100px;
+	border: 2px solid black;
+	border-radius: 10px;
+	text-align: center;
+}
+.display-wrapper .metar .name {
+}
+.display-wrapper .e-metar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-left: 20px;
+	width: 50%;
+}
+.display-wrapper .a-metar {
+	position: absolute;
+	top: 0;
+	left: 70%;
+	width: 30%;
+	transform: translateX(-70%);
+	-webkit-transform: translateX(-70%);
+	margin-right: 80px;
+}
+/* .display-wrapper .ally .panel .red {
+	background-color: red;
+} */
+.panel ul li span:hover {
+	/* color: white; */
+}
+.panel ul li:hover:before {
+	content: '▶︎';
+	line-height: 26px;
+	margin-right: 5px;
+}
+.panel ul li {
+	list-style: none;
+}
+
+/* --- 死亡表示 --- */
+.enemyDied, .allyDied {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%) translateX(0);
+	-webkit-transform: translateY(-50%) translateX(0);
+	font-size: 40px;
+	color: red;
+	font-weight: bold;
+	display:none;
+	z-index: 10;
+}
+.enemyDied {
+	position: absolute;
+	top: 50%;
+	left: 14%;
+	transform: translateY(-50%) translateX(-14%);
+	-webkit-transform: translateY(-50%) translateX(-14%);
+}
+
+/* --------ダメージパネル-------------- */
+.damage {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%); */
+  width: 50%;
+	margin: 0 auto;
+	display: none;
+}
+.allyDamage, .enemyDamage {
+	color: white;
+	text-align: center;
+}
+.allyDamage {
+	background-color: green;
+}
+.enemyDamage {
+	background-color: #0000cd;
+	display: none;
+}
+.spread {
+	font-size: 25px;
+	color: red;
+	font-weight: bold;
+}
+
+
+/* --- winner Text --- */
+#winText {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateY(-20%) translateX(-50%);
+	-webkit-transform: translateY(-20%) translateX(-50%);
+	font-size: 70px;
+	font-weight: bold;
+	color: #ffa500;
+	display: none;
+}
+#winText:before, #winText:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f521";
+	font-weight: bold;
+}
+#winText:before {
+	margin-right: 20px;
+}
+#winText:after {
+	margin-left: 20px;
+}
+
+/* --- ダメージ直後数値 --- */
+.red {
+	color: red;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#enemyDamaged, #allyDamaged {
+	transition-duration: 1s;
+	/* transition-delay: 1s; */
+
+}
+
+
+
+
+
+/* --- */
