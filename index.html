@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>モンスターバトル</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="//yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-contents">
+          <h1>モンスターバトル</h1>
+        </div><!-- /.header-contents -->
+      </header>
+      <div class="main-wrapper">
+        <div class="display-wrapper">
+          <p id="winText">Winner</p>
+          <div class="enemy-wrapper">
+            <p class="enemyDied">Died!!!</p>
+            <div class="enemy">
+              <img class="eImage" src="img/enemy.png" alt="enemy">
+              <div class="metar e-metar">
+                <p class="name">エイジャックス</p>
+                <p><span id="enemyDamaged"></span> / 100</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="damage-wrapper">
+            <div class="allyDamage damage">
+              <p><span id="allyName"></span>の<span class="spread" id="attackedName"></span> ！</p>
+              <p><span class="spread" id="allyAttack"></span>のダメージ！</p>
+            </div>
+            <div class="enemyDamage damage">
+              <p><span id="enemyName"></span>の<span class="spread">ランダムアタック</span>！</p>
+              <p><span class="spread" id="enemyAttack"></span>のダメージ！</p>
+            </div>
+          </div>
+
+          <div class="ally">
+            <div class="panel">
+              <ul>
+                <li><span id="fight">たたかう</span></li>
+                <li><span>バッグ</span></li>
+                <li><span>モンスター</span></li>
+                <li><span>にげる</span></li>
+              </ul>
+            </div>
+            <div class="metar a-metar">
+              <p class="name">ジェイソン</p>
+              <p><span id="allyDamaged"></span> / 100</p>
+            </div>
+            <img class="aImage" src="img/monster.png" alt="monster">
+            <p class="allyDied">Died!!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>
